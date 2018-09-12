@@ -1,0 +1,16 @@
+1. läs in textfilen, kalla denna fil P.
+2. sortera och indexera varje ord, skriv på fil, se fil som binärt träd?
+sorterad array? Trie? Kalla denna fil L. L[Index,ord]
+3. Skapa en ny temporär fil, latmannahashning, tre första bokstäverna.
+A[abc]. A innehåller hashtabell med början på ordet, med värde som pekar på där
+BÖRJAN av ordet, befinner sig i L.
+ex: sökord: hund, sökning i A, O(1) -> hasha HUN, -> extrahera värde, vilket är
+ett index i binärform i L, där alla ord som börjar på HUN-XXXX finns.
+4. Kolla i fil L, hitta sökord men BÖRJA sökning på det index som vi fick ur
+hashtabell, när vi funnit ord, extrahera index för fil P.
+OBS: Kan finnas multipla, därmed fortsätt sökning tills sökord inte längre
+överensstämmer.
+
+5. När vi funnit index för sökord i P, .seek() i fil P. ta ut -15 ord och +15 ord.
+
+6. Printa konkordansen
